@@ -1,0 +1,60 @@
+/* Combined CSS extracted & merged from original pages. Trimmed to essentials for the Blade templates. */
+:root{
+  --bg:#0a0a0a;
+  --bg-alt:#151515;
+  --bg-card:#1a1a1a;
+  --border:rgba(255,255,255,0.09);
+  --border-light:rgba(255,255,255,0.13);
+  --gold:#c9a84c;
+  --gold-bright:#d4b660;
+  --gold-glow:rgba(201,168,76,0.3);
+  --gold-subtle:rgba(201,168,76,0.07);
+  --cream:#e8e0d0;
+  --cream-soft:#d5cfc4;
+  --white:#f0ebe3;
+  --gray:#8a8a8a;
+  --gray-dim:#5a5a5a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--cream);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:1000}
+.nav-links a{margin:0 12px;color:var(--cream-soft);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:2.5px}
+.nav-cta{padding:10px 20px;border:1px solid var(--cream-soft);color:var(--cream-soft);text-decoration:none}
+
+/* HERO */
+.hero{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 40px 80px;text-align:center}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,80px);line-height:1.05}
+.hero-desc{font-family:'Cormorant Garamond',serif;color:var(--cream-soft);max-width:700px;margin-top:24px}
+
+/* FORM */
+.form-shell{max-width:760px;margin:0 auto;padding:60px 24px 100px}
+.section{display:none}
+.section.active{display:block}
+.section-bar{display:flex;align-items:center;gap:14px;padding:18px;border:1px solid var(--border-light);}
+.section-body{border:1px solid var(--border);Padding:40px 30px;background:rgba(255,255,255,0.012)}
+.field-label{display:block;margin-bottom:10px;font-weight:600}
+.input-wrap{border:1px solid var(--border-light);padding:8px}
+.input-wrap input,.input-wrap textarea{background:transparent;border:none;width:100%;color:var(--white)}
+.step-nav{display:flex;justify-content:space-between;margin-top:40px}
+.wiz-btn{padding:12px 28px;border:none;cursor:pointer}
+.wiz-btn.next{background:var(--cream);color:var(--bg)}
+.wiz-btn.back{background:transparent;border:1px solid var(--border-light);color:var(--cream-soft)}
+
+/* PILLs & CHIPS */
+.pill{display:inline-block;padding:10px 18px;border:1px solid var(--border-light);cursor:pointer;margin-right:8px}
+.pill.active{background:rgba(201,168,76,0.16);border-color:var(--gold);color:var(--gold-bright)}
+.chip{display:inline-flex;align-items:center;padding:12px;border:1px solid var(--border);margin:6px}
+.chip.active{background:var(--gold-subtle);border-color:var(--gold)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);align-items:center;justify-content:center}
+.lightbox.active{display:flex}
+
+/* FOOTER */
+footer{padding:32px 40px;border-top:1px solid var(--border);background:#080808;color:var(--gray-dim);}
+
+@media(max-width:968px){.hero{padding:100px 24px}.form-shell{padding:40px 16px}.nav-links{display:none}}
