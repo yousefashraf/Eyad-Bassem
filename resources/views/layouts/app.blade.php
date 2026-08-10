@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>@yield('title', 'Site')</title>
-  {{-- Use asset() for simple static setup; change to Vite helpers if you use Vite --}}
+  <title>@yield('title','Site')</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   @stack('head')
 </head>
